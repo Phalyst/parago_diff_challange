@@ -54,7 +54,6 @@ public class DiffEngineImp implements DiffEngine {
             }
         });
 
-        System.out.println(diffList);
         modified.setDiffList(diffList);
 
         return (T) modified ;
@@ -62,9 +61,6 @@ public class DiffEngineImp implements DiffEngine {
     }
 
     public <T extends Serializable> Diff<T> calculate(T original, T modified) throws DiffException {
-        System.out.println("########");
-        System.out.println(original);
-        System.out.println(modified);
 
         final List<Field> fields = getFieldsForClass(original.getClass());
         Diff diff = new Diff();

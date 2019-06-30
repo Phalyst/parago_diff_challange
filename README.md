@@ -1,1 +1,0 @@
-# parago_diff_challange
